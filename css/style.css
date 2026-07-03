@@ -6,7 +6,7 @@
 /* ── CSS Custom Properties (theme tokens) ───────────────────────────── */
 :root {
   /* Background colors */
-  --color-bg:           #f0f2f5;
+  --color-bg:           #c4a9d3;
   --color-surface:      #ffffff;
 
   /* Text colors */
@@ -14,10 +14,10 @@
   --color-text-muted:   #555555;
 
   /* Border */
-  --color-border:       #dddddd;
+  --color-border:       #000000;
 
   /* Accent / buttons */
-  --color-accent:       #0066cc;
+  --color-accent:       #9e4ae7;
   --color-accent-fg:    #ffffff;
 
   /* Semantic */
@@ -34,18 +34,18 @@
 
 [data-theme="dark"] {
   /* Background colors */
-  --color-bg:           #121212;
-  --color-surface:      #1e1e1e;
+  --color-bg:           #2a1c35;
+  --color-surface:      #000000;
 
   /* Text colors */
   --color-text:         #eeeeee;
   --color-text-muted:   #aaaaaa;
 
   /* Border */
-  --color-border:       #333333;
+  --color-border:       #4b4b4b;
 
   /* Accent / buttons */
-  --color-accent:       #4d9fff;
+  --color-accent:       #7b4aa9;
   --color-accent-fg:    #000000;
 
   /* Semantic */
@@ -131,6 +131,22 @@ section > h2 {
   letter-spacing: 0.08em;
   color: var(--color-text-muted);
   margin-bottom: 1rem;
+}
+
+/* Section accent title & muted description */
+.section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--color-accent);
+  margin-bottom: 0.25rem;
+  text-transform: none;
+}
+
+.section-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.75rem;
 }
 
 /* ── Buttons (general) ───────────────────────────────────────────────── */
