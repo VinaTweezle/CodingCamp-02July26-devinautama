@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Life Dashboard</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+    <!-- ── Theme Toggle ─────────────────────────────────────────────────── -->
+    <button
+      id="theme-toggle"
+      role="switch"
+      aria-checked="false"
+      aria-label="Toggle dark mode"
+    >
+      🌙 Dark
+    </button>
+
+    <div class="dashboard">
+
+    <!-- ── Greeting / Clock ──────────────────────────────────────────────── -->
+    <section id="greeting" aria-label="Greeting and clock">
+      <div id="clock-display" aria-live="polite"></div>
+      <div id="date-display"></div>
+      <div id="greeting-display" aria-live="polite"></div>
+
+      <div class="name-row">
+        <input
+          type="text"
+          id="name-input"
+          maxlength="50"
+          placeholder="Enter your name"
+          aria-label="Your name"
+        />
+        <button id="name-save" type="button">Save Name</button>
+        <span id="name-error" role="alert" aria-live="assertive"></span>
+      </div>
+    </section>
+
+    <!-- ── Focus Timer ───────────────────────────────────────────────────── -->
+    <section id="timer" aria-label="Focus timer">
+      <div id="timer-display" aria-live="polite">25:00</div>
+
+      <div class="btn-group">
+        <button id="timer-start" type="button">Start</button>
+        <button id="timer-stop"  type="button" disabled>Stop</button>
+        <button id="timer-reset" type="button">Reset</button>
+      </div>
+
+      <div class="duration-row">
+        <label for="timer-duration">Duration (min):</label>
+        <input
+          type="number"
+          id="timer-duration"
+          min="1"
+          max="120"
+          value="25"
+          aria-label="Pomodoro duration in minutes"
+        />
+        <button id="timer-duration-save" type="button">Save</button>
+        <span id="timer-error" role="alert" aria-live="assertive"></span>
+      </div>
+    </section>
+
+    <!-- ── To-do List ────────────────────────────────────────────────────── -->
+    <section id="todo" aria-label="To-do list">
+      <div class="add-row">
+        <input
+          type="text"
+          id="todo-input"
+          maxlength="500"
+          placeholder="New task…"
+          aria-label="New task text"
+        />
+        <button id="todo-add" type="button">Add Task</button>
+        <span id="todo-error" role="alert" aria-live="assertive"></span>
+      </div>
+
+      <div id="todo-count" aria-live="polite">0 incomplete tasks</div>
+      <ul id="todo-list" aria-label="Task list"></ul>
+    </section>
+
+    <!-- ── Quick Links ───────────────────────────────────────────────────── -->
+    <section id="quick-links" aria-label="Quick links">
+      <div class="add-row">
+        <input
+          type="text"
+          id="link-label-input"
+          maxlength="50"
+          placeholder="Label"
+          aria-label="Link label"
+        />
+        <input
+          type="url"
+          id="link-url-input"
+          maxlength="2048"
+          placeholder="https://example.com"
+          aria-label="Link URL"
+        />
+        <button id="link-add" type="button">Add Link</button>
+        <span id="link-error" role="alert" aria-live="assertive"></span>
+      </div>
+
+      <div id="links-container" aria-label="Saved links"></div>
+    </section>
+
+    </div><!-- /.dashboard -->
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
